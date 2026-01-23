@@ -4,7 +4,14 @@ html, body {
     padding: 0; 
     background: #000; 
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
+
+@media (max-width: 768px) {
+    /* Anpassungen für mobile Geräte */
+    body {
+        overflow: auto; /* Sicherstellen, dass Scrollen auf mobilen Geräten aktiviert ist */
+    }
 
 canvas#matrix-bg { 
     position: fixed; 
@@ -150,4 +157,5 @@ nav a:hover {
     transform: translateY(0);
 
 }
+
 

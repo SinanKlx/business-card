@@ -12,6 +12,7 @@ html, body {
     body {
         overflow: auto; /* Sicherstellen, dass Scrollen auf mobilen Geräten aktiviert ist */
     }
+}
 
 canvas#matrix-bg { 
     position: fixed; 
@@ -157,5 +158,6 @@ nav a:hover {
     transform: translateY(0);
 
 }
+
 
 

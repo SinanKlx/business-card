@@ -3,7 +3,7 @@ html, body {
     margin: 0; 
     padding: 0; 
     background: #000; 
-    overflow: hidden;
+    overflow: auto;
 }
 
 canvas#matrix-bg { 
@@ -147,4 +147,5 @@ nav a:hover {
 .section.visible {
     opacity: 1;
     transform: translateY(0);
+
 }

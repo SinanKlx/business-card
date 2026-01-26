@@ -1,41 +1,9 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>CV Sinan Kilic</title>
-</head>
-<body>
-<canvas id="matrix-bg" aria-hidden="true"></canvas>
-<header>
-    <h1>curriculum vitae Sinan Kilic</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about me</a></li>
-            <li>
-                <a href="cv.html">professional career</a>
-                <ul class="dropdown">
-                    <li><a href="">training as a freight forwarding and logistics services clerk</a></li>
-                    <li><a href="">....</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">contact options</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div class="content-wrap">
-        Test
-    </div>
-</main>
+<script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
 
-<footer>
-    <p>&copy; <span id="year"></span> Sinan Kilic, all rights reserved</p>
-</footer>
-
-<script src="assets/script.js"></script>
-<script src="assets/year.js"></script>
-</body>
-</html>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+</script>

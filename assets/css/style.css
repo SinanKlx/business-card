@@ -1,0 +1,427 @@
+/* ===== GRUNDLEGENDE STYLES ===== */
+html, body { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    background: #000; 
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e6ffe6;
+}
+
+/* ===== MATRIX HINTERGRUND ===== */
+canvas#matrix-bg { 
+    position: fixed; 
+    inset: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    z-index: 0; 
+}
+
+body > * { 
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header { 
+    background: rgba(51, 51, 51, 0.85);
+    color: white; 
+    padding: 1rem; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+    margin-right: 1rem;
+}
+
+nav li:hover > .dropdown {
+    display: block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    cursor: pointer;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Aktive Navigation */
+nav a.active {
+    color: #00FF41 !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.85);
+    padding: 0;
+    list-style: none;
+    min-width: 160px;
+    z-index: 2;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== SEITEN-INHALTE ===== */
+.page-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+    padding: 1rem;
+}
+
+.page-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* ===== BILD ===== */
+.imageSinan {
+    border-radius: 50%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* ===== WILLKOMMENS NACHRICHT ===== */
+.welcomeMessage {
+    background: rgba(51, 51, 51, 0.85);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 6px;
+}
+
+/* ===== SLIDESHOW ===== */
+.slideShow {
+    background: rgba(51, 51, 51, 0.85);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 6px;
+}
+
+.slides {
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.slides:hover {
+    color: #00FF41;
+    text-decoration: underline;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+.content-wrap { 
+    background: rgba(0, 0, 0, 0.45); 
+    color: #e6ffe6;
+    padding: 1rem; 
+    border-radius: 6px; 
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+/* ===== SECTIONS (CV) ===== */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #00FF41;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+footer { 
+    background: rgba(51, 51, 51, 0.85);
+    color: #ffffff;
+    padding: 1rem; 
+    text-align: center; 
+    margin-top: 2rem; 
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .imageSinan {
+        max-width: 250px;
+        height: 250px;
+    }
+    
+    .welcomeMessage, 
+    .slideShow, 
+    .content-wrap {
+        margin: 1rem;
+        padding: 15px;
+    }
+}
+
+/* ===== MOBILE FIRST APPROACH ===== */
+
+/* Basis-Stile bleiben gleich... */
+
+/* ===== TOUCH-FREUNDLICHE NAVIGATION ===== */
+@media (max-width: 768px) {
+    /* Mobile Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    nav a {
+        padding: 15px;
+        font-size: 18px; /* Größerer Touch-Bereich */
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Dropdown für Mobile */
+    .dropdown {
+        position: static;
+        width: 100%;
+        display: none;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .dropdown.active {
+        display: block;
+    }
+    
+    .dropdown li {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Touch-freundliche Buttons */
+    .nav-link, .slides {
+        min-height: 44px; /* Apple HIG: Mindest-Touch-Größe */
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Matrix-Hintergrund reduzieren für bessere Performance */
+    canvas#matrix-bg {
+        opacity: 0.7; /* Weniger intensiv */
+    }
+    
+    /* Größere Schrift für bessere Lesbarkeit */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    /* Bild optimieren */
+    .imageSinan {
+        max-width: 250px;
+        height: 250px;
+        margin: 20px auto;
+    }
+    
+    /* Padding für Content */
+    .content-wrap, .welcomeMessage, .slideShow {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    /* Sections besser auf Mobile */
+    .section {
+        padding: 15px;
+        margin: 15px 0;
+        border-left-width: 3px;
+    }
+}
+
+/* Sehr kleine Displays (Smartphones im Hochformat) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .imageSinan {
+        max-width: 200px;
+        height: 200px;
+    }
+    
+    .welcomeMessage h1 {
+        font-size: 22px;
+    }
+    
+    /* Matrix noch weiter reduzieren für alte Handys */
+    canvas#matrix-bg {
+        opacity: 0.5;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .imageSinan {
+        max-width: 300px;
+        height: 300px;
+    }
+    
+    nav a {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+}
+
+/* ===== PERFORMANCE OPTIMIERUNGEN ===== */
+
+/* Hardware-Beschleunigung aktivieren */
+.page-content {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+/* Smooth Scrolling für alle Geräte */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Touch-Hover States entfernen */
+@media (hover: none) and (pointer: coarse) {
+    nav a:hover {
+        text-decoration: none;
+    }
+    
+    .slides:hover {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    /* Aktive States für Touch */
+    nav a:active, .slides:active {
+        background-color: rgba(0, 255, 65, 0.2);
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
+
+/* ===== ORIENTIERUNGS-SPECIFIC ===== */
+
+/* Querformat optimieren */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 5px;
+    }
+    
+    header h1 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    nav li {
+        width: auto;
+        margin: 0 5px;
+    }
+    
+    .imageSinan {
+        max-width: 150px;
+        height: 150px;
+        float: left;
+        margin: 10px;
+    }
+    
+    .welcomeMessage {
+        margin: 10px;
+        padding: 10px;
+    }
+}

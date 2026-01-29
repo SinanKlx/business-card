@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <!-- WICHTIGE MOBILE META-TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+        
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <title id="dynamic-title">CV Sinan Kilic</title>
+    
+    
+</head>
+<!-- MATRIX HINTERGRUND -->
+    <canvas id="matrix-bg" aria-hidden="true"></canvas>
+<body> 
+    <!-- HEADER MIT NAVIGATION -->
+    <header>
+        <h1>curriculum vitae Sinan Kilic</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link" data-page="home">home</a></li>
+                <li><a href="#about" class="nav-link" data-page="about">about me</a></li>
+                <li>
+                    <a href="#cv" class="nav-link" data-page="cv">professional career</a>
+                    <ul class="dropdown">
+                        <li><a href="#training" class="nav-link" data-page="training">training as a freight forwarding clerk</a></li>
+                        <li><a href="#experience" class="nav-link" data-page="experience">work experience</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="nav-link" data-page="contact">contact options</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ALLE SEITEN-INHALTE IN EINER DATEI -->
+    <main id="main-content">
+        
+        <!-- HOME PAGE -->
+        <div id="page-home" class="page-content active">
+            <img class="imageSinan" src="assets/img/IMG_Kilic.png" alt="Sinan Kilic">
+            <div class="welcomeMessage">
+                <h1>My name is Sinan Kilic,</h1>
+                <p>I'm Software- and Webdeveloper in retraining</p>
+                <p>How can I help you?</p>
+            </div>
+            <div class="slideShow">
+                <div><a class="slides nav-link" href="#about" data-page="about">Would you like to get know me?</a></div>
+                <div><a class="slides nav-link" href="#cv" data-page="cv">Would you like to learn more about my professional career?</a></div>
+                <div><a class="slides nav-link" href="#contact" data-page="contact">Get in contact with me</a></div>
+            </div>
+        </div>
+        
+        <!-- ABOUT PAGE -->
+        <div id="page-about" class="page-content">
+            <div class="content-wrap">
+                <h1>About Me</h1>
+                <p>Hier kommt deine persönliche Vorstellung...</p>
+                <p>Ich bin Sinan Kilic, Webentwickler aus Leidenschaft.</p>
+            </div>
+        </div>
+        
+        <!-- CV PAGE -->
+        <div id="page-cv" class="page-content">
+            <div class="content-wrap">
+                <div class="section hidden">
+                    <h1>kath. Franz-Hitze Grundschule, 57462 Olpe-Rhode</h1>
+                    <p>08.1999 - 08.2003</p>
+                    <p>Grundschule</p>
+                </div>
+                <div class="section hidden">
+                    <h1>Weiterführende Schule</h1>
+                    <p>08.2003 - 06.2009</p>
+                    <p>Realschule</p>
+                </div>
+                <div class="section hidden">
+                    <h1>Ausbildung zum Speditionskaufmann</h1>
+                    <p>08.2009 - 07.2012</p>
+                    <p>IHK Abschluss</p>
+                </div>
+                <div class="section hidden">
+                    <h1>Weiterbildung zum Webentwickler</h1>
+                    <p>2023 - 2024</p>
+                    <p>Online-Kurse und Selbststudium</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TRAINING PAGE -->
+        <div id="page-training" class="page-content">
+            <div class="content-wrap">
+                <h1>Training as a freight forwarding clerk</h1>
+                <p>Details zur Ausbildung...</p>
+            </div>
+        </div>
+        
+        <!-- CONTACT PAGE -->
+        <div id="page-contact" class="page-content">
+            <div class="content-wrap">
+                <h1>Contact Options</h1>
+                <p>Email: sinan@example.com</p>
+                <p>Telefon: 0123 456789</p>
+                <p>LinkedIn: linkedin.com/in/sinan</p>
+            </div>
+        </div>
+        
+        <!-- EXPERIENCE PAGE -->
+        <div id="page-experience" class="page-content">
+            <div class="content-wrap">
+                <h1>Work Experience</h1>
+                <p>Hier kommen berufliche Erfahrungen...</p>
+            </div>
+        </div>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> Sinan Kilic, all rights reserved</p>
+    </footer>
+    
+    <!-- ALLE JAVASCRIPT DATEIEN -->
+    <script src="assets/js/matrix.js"></script>
+    <script src="assets/js/year.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

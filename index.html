@@ -1,45 +1,286 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-	<!-- MOBILE META-TAGS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="mobile-web-app-capable" content="yes">
-	
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/mobile.css">
-	<title id="dynamic-title">CV Sinan Kilic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <!-- MOBILE META-TAGS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+        
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <title id="dynamic-title">CV Sinan Kilic</title>
 </head>
-	<!-- MATRIX BACKGROUND -->
-	<canvas id="matrix-bg" aria-hidden="true"></canvas>
-	<body> 
-	<!-- HEADER MIT NAVIGATION -->
-	<header>
-	<h1>curriculum vitae Sinan Kilic</h1>
-	<nav><ul>
-	<li><a href="#home" class="nav-link" data-page="home">home</a></li>
-	<li><a href="#skills" class="nav-link" data-page="skills">skills and tools</a>
-	<ul class="dropdown"><li><a href="#references" class="nav-link" data-page="references">references / certificates / qualifications</a></li></ul>
-	</li>
-	<li><a href="#cv" class="nav-link" data-page="cv">professional career</a></li>
-	<li><a href="#contact" class="nav-link" data-page="contact">contact options</a></li>
-	<li><a href="#guestbook" class="nav-link" data-page="guestbook">guestbook</a></li>
-	</ul></nav>
-</header>
+<!-- MATRIX BACKGROUND -->
+    <canvas id="matrix-bg" aria-hidden="true"></canvas>
+<body> 
+    <!-- HEADER MIT NAVIGATION -->
+    <header>
+        <h1>curriculum vitae Sinan Kilic</h1>
+        <nav><ul>
+            <li><a href="#home" class="nav-link" data-page="home">home</a></li>
+            <li><a href="#skills" class="nav-link" data-page="skills">skills and tools</a>
+                <ul class="dropdown"><li><a href="#references" class="nav-link" data-page="references">references / certificates / qualifications</a></li></ul>
+            </li>
+            <li><a href="#cv" class="nav-link" data-page="cv">professional career</a></li>
+            <li><a href="#contact" class="nav-link" data-page="contact">contact options</a></li>
+            <li><a href="#guestbook" class="nav-link" data-page="guestbook">guestbook</a></li>
+        </ul></nav>
+    </header>
+    
+    <main>        
+        <!-- HOME PAGE -->
+        <div id="page-home" class="page-content active">
+            <img class="image-Sinan" src="assets/img/IMG_Kilic.png" alt="Sinan Kilic">
+            <div class="welcomeMessage">
+                <h1>My name is Sinan Kilic,</h1>
+                <p>I'm Software- and Webapplication developer in retraining</p>
+                <p>How can I help you?</p>
+            </div>
+            <div class="slideShow">
+                <div><a class="slides" href="#skills" data-page="skills">Would you like to get know my SKILLS?</a></div>
+                <div><a class="slides" href="#cv" data-page="cv">Would you like to learn more about my professional career?</a></div>
+                <div><a class="slides" href="#contact" data-page="contact">Get in contact with me</a></div>
+            </div>
+        </div>
+        
+        <!-- SKILLS PAGE -->
+        <div id="page-skills" class="page-content">
+            <div class="content-wrap">
+                <h1>Skills and used tools</h1>
+                <p>my name is Sinan Kilic, a passionate software and web application developer</p>
+                <p>these are my developer tools...</p>
+                <div class="skills-gallery">
+                    <div class="skills-item">
+                        <img class="image-Java" src="assets/img/skills/java.png" alt="Java">
+                        <p>Java</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-JavaScript" src="assets/img/skills/javascript.png" alt="JavaScript">
+                        <p>Javascript</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-HTML" src="assets/img/skills/html.png" alt="HTML">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-CSS" src="assets/img/skills/css.png" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-PHP" src="assets/img/skills/php.png" alt="PHP">
+                        <p>PHP</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-symfony" src="assets/img/skills/symfony.png" alt="symfony">
+                        <p>symfony Framework</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-intelliJ" src="assets/img/skills/intellij-idea.png" alt="intelliJ">
+                        <p>intelliJ idea</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-VS2019" src="assets/img/skills/visual-studio-code-2019.png" alt="visual-studio-code-2019">
+                        <p>VS Code 2019</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-VS" src="assets/img/skills/visual-studio.png" alt="visual-studio">
+                        <p>Visual Studio</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-eclipse" src="assets/img/skills/eclipse.png" alt="Eclipse">
+                        <p>Eclipse</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-docker" src="assets/img/skills/docker-logo.png" alt="Docker">
+                        <p>Docker</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-github" src="assets/img/skills/github.png" alt="Github">
+                        <p>Github</p>
+                    </div>
+                    <div class="skills-item">
+                        <img class="image-gitlab" src="assets/img/skills/gitlab.png" alt="GitLab">
+                        <p>GitLab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CV PAGE -->
+        <div id="page-cv" class="page-content">
+            <div class="content-wrap" id="cv">
+                <div class="section">
+                    <h1>cath. Franz-Hitze primary school, 57462 Olpe-Rhode</h1>
+                    <p>08.1999 - 08.2003</p>
+                    <p>primary school</p>
+                </div>
+                <div class="section">
+                    <h1>Hakmicke municipial secondary school, 57462 Olpe</h1>
+                    <p>08.2003 - 08.2009</p>
+                    <p>secondary school diploma typ a</p>
+                </div>
+                <div class="section">
+                    <h1>Vocational college of Olpe, 57462 Olpe</h1>
+                    <p>08.2009 - 08.2011</p>
+                    <p>technical college entrance qualification with Q-mark</p>
+                </div>
+                <div class="section">
+                    <h1>training as a freight forwarding and logistcs clerk</h1>
+                    <p>Spedition Lenneper e. K., 57413 Finnentrop</p>
+                    <p>08.2011 - 08.2014</p>
+                    <p>IHK qualification as a freight forwarding agent</p>
+                </div>
+                <div class="section">
+                    <h1>employee as a freight forwarding agent</h1>
+                    <p>Spedition Lenneper e. K., 57413 Finnentrop</p>
+                    <p>08.2014 - 09.2017</p>
+                </div>
+                <div class="section">
+                    <h1>work preparation employee</h1>
+                    <p>Feinblech Systeme GmbH, 57413 Finnentrop</p>
+                    <p>09.2017 - 06.2024</p>
+                </div>
+                <div class="section">
+                    <h1>preparatory course for entering an IT career</h1>
+                    <p>WBS Training AG, 57462 Olpe</p>
+                    <p>07.2024 - 08.2024</p>
+                </div>
+                <div class="section">
+                    <h1>retraining as an IT specialist in application development</h1>
+                    <p>WBS Training AG, 57462 Olpe</p>
+                    <p>08.2024 - expected 08.2026</p>
+                </div>
+            </div>
+        </div>
 
-<main>
-	<!-- FOOTER -->
-	<footer>
-	<p>&copy; <span id="year"></span> Sinan Kilic, all rights reserved</p>
-	</footer>
-</main>
+        <!-- REFERENCES PAGE -->
+        <div id="page-references" class="page-content">
+        <div class="content-wrap">
+            <h1>References / Certificates / Qualifications</h1>
+            <div class="references-slideshow">            
+                <!-- Slide 1 -->
+                <div class="reference-slide active">
+                    <h3>Java certification</h3>
+                    <img src="assets/img/references/java_u.png" alt="Java Udemy" class="reference-img" data-fullsize="assets/img/references/java_u.png">
+                    <p>Udemy certified Java developer</p>
+                    <p>Issued: 08/2024</p>
+                </div>            
+                <!-- Slide 2 -->
+                <div class="reference-slide">
+                    <h3>Project management certification</h3>
+                    <img src="assets/img/references/pm.png" alt="project management certification" class="reference-img" data-fullsize="assets/img/references/pm.png">
+                    <p>Project management certified by LinkedIn in collaboration with Microsoft</p>
+                    <p>Issued: 08/2024</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="reference-slide">
+                    <h3>JavaScript Essentials</h3>
+                    <img src="assets/img/references/js.png" alt="JavaScript Certification" class="reference-img" data-fullsize="assets/img/references/js.png">
+                    <p>Cisco Networking Academy in collaboration with OpenEDG JS Institute</p>
+                    <p>Issued: 11/2024</p>
+                </div>                
+                <!-- Slide 4 -->
+                <div class="reference-slide">
+                    <h3>Java certification</h3>
+                    <img src="assets/img/references/java_l.png" alt="Java LinkedIn Learning" class="reference-img" data-fullsize="assets/img/references/java_l.png">
+                    <p>LinkedIn Learning certified Java developer</p>
+                    <p>Issued: 09/2024</p>
+                </div>
+                <!-- Slide 5 -->
+                <div class="reference-slide">
+                    <h3>Interim report card for retraining as an IT-specialist in application development</h3>
+                    <img src="assets/img/references/wbs_.png" alt="midterm report" class="reference-img" data-fullsize="assets/img/references/wbs_.png">
+                    <img src="assets/img/references/wbs__.png" alt="midterm report" class="reference-img" data-fullsize="assets/img/references/wbs__.png">
+                    <p>WBS Training certified interim report card</p>
+                    <p>Issued: 03/2025</p>
+                </div>                
+                <!-- Navigation Dots -->
+                <div class="slideshow-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            
+            <!-- Navigation Buttons -->
+            <button class="slideshow-btn prev-btn" aria-label="Previous slide">❮</button>
+            <button class="slideshow-btn next-btn" aria-label="Next slide">❯</button>
+            
+            <!-- Auto-play Toggle -->
+            <div class="autoplay-control">
+                <button id="autoplay-toggle" class="autoplay-btn" aria-label="Toggle autoplay">
+                    ⏸️ Pause
+                </button>
+                <span class="timer"></span>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- CONTACT PAGE -->
+        <div id="page-contact" class="page-content">
+            <div class="content-wrap">
+                <h1>Contact Options</h1>
+                <div class="contact-gallery">                
+                    <a href="mailto:sinankilic@me.com">
+                        <img src="assets/img/contact/mail.png">
+                        <p>sinankilic@me.com</p>
+                    </a>
+                    <a href="callto:+491736639248" target="_blank">
+                        <img src="assets/img/contact/smartphones.png">
+                        <p>+49 0173 6639248</p>
+                    </a>
+                    <a href="https://wa.me/491736639248" target="_blank">
+                        <img src="assets/img/contact/whatsapp.png">
+                        <p>contact via WhatsApp</p>
+                    </a>
+                    <a href="https://github.com/SinanKlx" target="_blank">
+                        <img src="assets/img/skills/github.png">
+                        <p>contact via Github</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sinan-kilic-a31287317/?locale=de_DE" target="_blank">
+                        <img src="assets/img/contact/linkedin.png">
+                        <p>contact via LinkedIn</p>
+                    </a>
+                    <a href="https://www.xing.com/in/sinan-kilic-a31287317/?locale=de_DE" target="_blank">
+                        <img src="assets/img/contact/xing.png">
+                        <p>contact via Xing</p>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-<!-- ALLE JAVASCRIPT DATEIEN -->
-<script src="assets/js/matrix.js"></script>
-<script src="assets/js/year.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="assets/js/main.js"></script>
+        <!-- GUESTBOOK PAGE-->
+        <div id="page-guestbook" class="page-content">
+            <div class="content-wrap">
+                <h1>Guestbook</h1>
+                <form id="guestbook-form" class="matrix-form">
+                    <input type="text" id="gb-name" placeholder="your name" required>
+                    <textarea id="gb-message" placeholder="Deine Nachricht..." required></textarea>
+                    <button type="submit">submit</button>
+                </form>
+
+                <hr>
+                <div id="guestbook-entries">
+                <p>loading entries...</p>
+                </div>
+            </div>
+        </div>        
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> Sinan Kilic, all rights reserved</p>
+    </footer>
+    
+    <!-- ALLE JAVASCRIPT DATEIEN -->
+    <script src="assets/js/matrix.js"></script>
+    <script src="assets/js/year.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>

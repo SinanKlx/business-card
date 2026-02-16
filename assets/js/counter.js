@@ -27,5 +27,6 @@ async function initVisitorCounter() {
 }
 
 initVisitorCounter();
+
 // Global verfügbar machen
 window.initVisitorCounter = initVisitorCounter;

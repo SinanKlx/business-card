@@ -42,6 +42,11 @@ let currentPage = 'home';
 
 // ========== HAUPTFUNKTIONEN ==========
 
+// zugangsdaten Datenbank
+const SB_URL = "https://bpbpctcsaduqhbbvknuh.supabase.co";
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwYnBjdGNzYWR1cWhiYnZrbnVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4OTQ2NzAsImV4cCI6MjA4NjQ3MDY3MH0.KArbHXGlSMEiRfV4_ZUjPffR9nMRY6BdbeuQbv-QIhI";
+const supabaseClient = supabase.createClient(SB_URL, SB_KEY);
+
 /**
  * Zeigt eine Seite an
  * @param {string} pageId - ID der Seite (z.B. 'home', 'cv')

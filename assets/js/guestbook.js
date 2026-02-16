@@ -1,8 +1,3 @@
-// Konfiguration (Daten von Supabase einfügen)
-const SB_URL = "https://bpbpctcsaduqhbbvknuh.supabase.co";
-const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwYnBjdGNzYWR1cWhiYnZrbnVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4OTQ2NzAsImV4cCI6MjA4NjQ3MDY3MH0.KArbHXGlSMEiRfV4_ZUjPffR9nMRY6BdbeuQbv-QIhI";
-const supabaseClient = supabase.createClient(SB_URL, SB_KEY);
-
 async function initGuestbook() {
     const form = document.getElementById('guestbook-form');
     const display = document.getElementById('guestbook-entries');
@@ -47,4 +42,5 @@ async function initGuestbook() {
 }
 
 // Globaler Aufruf für die main.js
+
 window.initGuestbook = initGuestbook;

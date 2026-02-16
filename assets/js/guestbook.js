@@ -1,3 +1,4 @@
+// Konfiguration (Daten von Supabase einfügen)
 async function initGuestbook() {
     const form = document.getElementById('guestbook-form');
     const display = document.getElementById('guestbook-entries');
@@ -42,5 +43,4 @@ async function initGuestbook() {
 }
 
 // Globaler Aufruf für die main.js
-
 window.initGuestbook = initGuestbook;

@@ -42,5 +42,7 @@ async function initGuestbook() {
     loadMessages(); // Initiales Laden
 }
 
+initGuestbook();
+
 // Globaler Aufruf für die main.js
 window.initGuestbook = initGuestbook;

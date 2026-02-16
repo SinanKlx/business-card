@@ -1,3 +1,5 @@
+console.log(req.ip);
+console.log(req.headers['x-forwarded-for']);
 
 // ========== SEITEN-MANAGER ==========
 

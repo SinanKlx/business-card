@@ -83,6 +83,21 @@ function showPage(pageId) {
     
     // 7. Seitenspezifische Funktionen starten
     runPageScripts(pageId);
+
+    // 8. Seitenspezifische Funktionen überprüfen und triggern
+    if (pages[pageId].scripts) {
+    pages[pageId].scripts.forEach(scriptPath => {
+        // Nur hinzufügen, wenn es noch nicht existiert
+        if (!document.querySelector(`script[src="${scriptPath}"]`)) {
+            const script = document.createElement('script');
+            script.src = scriptPath;
+            document.body.appendChild(script);
+        } else {
+            // Wenn es schon da ist, einfach nur die Funktion ausführen
+            triggerPageSpecificInit(pageId);
+        }
+    });
+    }
 }
 
 /**

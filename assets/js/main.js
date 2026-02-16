@@ -1,6 +1,3 @@
-console.log(req.ip);
-console.log(req.headers['x-forwarded-for']);
-
 // ========== SEITEN-MANAGER ==========
 
 // Alle Seiten konfigurieren
@@ -556,3 +553,4 @@ window.addEventListener('resize', function() {
         }
     }, 250);
 });
+

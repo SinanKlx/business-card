@@ -287,3 +287,8 @@ html {
         gap: 10px;
     }
 }
+
+footer {
+    padding: 1rem;
+    width: 100%;
+}

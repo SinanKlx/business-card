@@ -336,6 +336,8 @@ function initApp() {
     }
     
     console.log('App initialisiert');
+
+    initMobileNavBehavior();
 }
 
 // ========== START DER ANWENDUNG ==========
@@ -513,20 +515,84 @@ function optimizeViewport() {
     });
 }
 
+// mobile anpassungen, zum verstecken des <header>´s
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+function initMobileNavBehavior() {
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                // Scrollt nach unten -> Verstecken
+                header.classList.add('nav-hidden');
+            } else {
+                // Scrollt nach oben -> Anzeigen
+                header.classList.remove('nav-hidden');
+            }
+            lastScrollY = currentScrollY;
+        }
+    });
+
+    // Nach Auswahl eines Links -> Verstecken
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                // Kurze Verzögerung, damit man den Klick-Effekt noch sieht
+                setTimeout(() => {
+                    header.classList.add('nav-hidden');
+                }, 300);
+            }
+        });
+    });
+}
+
+function initScrollBehavior() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    // A: Verhalten beim Scrollen
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+            const currentScrollY = window.scrollY;
+
+            // Nach unten scrollen -> Verstecken
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                header.classList.add('nav-hidden');
+            } 
+            // Nach oben scrollen -> Anzeigen
+            else {
+                header.classList.remove('nav-hidden');
+            }
+            lastScrollY = currentScrollY;
+        }
+    }, { passive: true });
+
+    // B: Verhalten nach Auswahl eines Links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                // Wir verstecken den Header sofort nach dem Klick
+                header.classList.add('nav-hidden');
+            }
+        });
+    });
+}
+
 // ===== INIT FUNKTION ERWEITERN =====
 
-function initApp() {
-    console.log('Starte Single-Page Application');
-    
-    // 1. Event Listener initialisieren
-    initEventListeners();
-    
-    // 2. Mobile Features
+function initApp() {    
+    // 1. Mobile Features
     if (window.innerWidth <= 768) {
         initMobileDropdowns();
         initTouchGestures();
         optimizeViewport();
         optimizeMatrixForMobile();
+        initScrollBehavior();
     }
     
     // 3. Prüfen ob eine Seite in der URL angefordert wird
@@ -553,4 +619,3 @@ window.addEventListener('resize', function() {
         }
     }, 250);
 });
-

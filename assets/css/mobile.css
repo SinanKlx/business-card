@@ -44,6 +44,17 @@
         border-bottom: 2px solid #00FF41;
     }
 
+    /* Animation zum 'X' wenn offen */
+    .hamburger-btn.is-open span:nth-child(1) { 
+        transform: rotate(45deg) translate(5px, 5px); 
+    }
+    .hamburger-btn.is-open span:nth-child(2) { 
+        opacity: 0; 
+    }
+    .hamburger-btn.is-open span:nth-child(3) { 
+        transform: rotate(-45deg) translate(7px, -7px); 
+    }
+
     /* Wenn das Menü die Klasse 'active' hat, anzeigen */
     #nav-menu.active {
         display: flex;
@@ -73,10 +84,11 @@
     
     /* Dropdown für Mobile */
     .dropdown {
-        position: static;
-        width: 100%;
         display: none;
-        background: rgba(51, 51, 51, 0.85);;
+        position: static; /* Schiebt Inhalt nach unten statt darüber zu liegen */
+        width: 100%;
+        background: rgba(0, 255, 65, 0.05); /* Leichter grüner Schimmer */
+        padding-left: 15px;
     }
     
     .dropdown.active {

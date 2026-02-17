@@ -17,17 +17,30 @@
 <body> 
     <!-- HEADER MIT NAVIGATION -->
     <header>
+    <div class="header-inner">
         <h1>curriculum vitae Sinan Kilic</h1>
-        <nav><ul>
+        
+        <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <nav id="main-nav">
+        <ul id="nav-menu">
             <li><a href="#home" class="nav-link" data-page="home">home</a></li>
             <li><a href="#skills" class="nav-link" data-page="skills">skills and tools</a>
-                <ul class="dropdown"><li><a href="#references" class="nav-link" data-page="references">references / certificates / qualifications</a></li></ul>
+                <ul class="dropdown">
+                    <li><a href="#references" class="nav-link" data-page="references">references</a></li>
+                </ul>
             </li>
-            <li><a href="#cv" class="nav-link" data-page="cv">professional career</a></li>
-            <li><a href="#contact" class="nav-link" data-page="contact">contact options</a></li>
+            <li><a href="#cv" class="nav-link" data-page="cv">experience</a></li>
+            <li><a href="#contact" class="nav-link" data-page="contact">contact</a></li>
             <li><a href="#guestbook" class="nav-link" data-page="guestbook">guestbook</a></li>
-        </ul></nav>
-    </header>
+        </ul>
+    </nav>
+</header>
     
     <main>        
         <!-- HOME PAGE -->

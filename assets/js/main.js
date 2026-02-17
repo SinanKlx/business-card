@@ -585,7 +585,10 @@ function initScrollBehavior() {
 
 // ===== INIT FUNKTION ERWEITERN =====
 
-function initApp() {    
+function initApp() {
+    
+    initEventListeners();
+    
     // 1. Mobile Features
     if (window.innerWidth <= 768) {
         initMobileDropdowns();
@@ -619,3 +622,4 @@ window.addEventListener('resize', function() {
         }
     }, 250);
 });
+

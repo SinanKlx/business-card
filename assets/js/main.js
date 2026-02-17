@@ -607,6 +607,8 @@ function initApp() {
         // 4. Standard: Home anzeigen
         showPage('home');
     }
+
+    initHamburger();
     
     console.log('App initialisiert - Mobile:', window.innerWidth <= 768);
 }
@@ -622,3 +624,24 @@ window.addEventListener('resize', function() {
         }
     }, 250);
 });
+
+function initHamburger() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('nav-menu');
+    const links = document.querySelectorAll('.nav-link');
+
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            // Optional: Button Animation zum X
+            btn.classList.toggle('is-open'); 
+        });
+
+        // Menü schließen, wenn ein Link geklickt wird
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
+        });
+    }
+}

@@ -360,37 +360,23 @@ window.initSlideshow = initSlideshow;
  * Mobile Dropdown-Toggle
  */
 function initMobileDropdowns() {
-    const dropdownParents = document.querySelectorAll('nav > ul > li:has(.dropdown)');
-    
+    const dropdownParents = document.querySelectorAll('nav li');
+
     dropdownParents.forEach(parent => {
-        const trigger = parent.querySelector('a.nav-link');
         const dropdown = parent.querySelector('.dropdown');
-        
-        if (trigger && dropdown) {
-            // Touch-Event für Mobile
-            trigger.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Alle anderen Dropdowns schließen
-                    document.querySelectorAll('.dropdown.active').forEach(d => {
-                        if (d !== dropdown) d.classList.remove('active');
-                    });
-                    
-                    // Dieses Dropdown umschalten
-                    dropdown.classList.toggle('active');
-                }
-            });
-        }
-    });
-    
-    // Klick außerhalb schließt Dropdowns
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 && !e.target.closest('nav > ul > li:has(.dropdown)')) {
-            document.querySelectorAll('.dropdown.active').forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
+        if (dropdown) {
+            // :scope sorgt dafür, dass nur der direkte Link im li gemeint ist
+            const link = parent.querySelector(':scope > a'); 
+
+            if (link) {
+                link.onclick = (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault(); // Verhindert Seitenwechsel
+                        dropdown.classList.toggle('active');
+                        link.classList.toggle('dropdown-open');
+                    }
+                };
+            }
         }
     });
 }
@@ -631,17 +617,21 @@ function initHamburger() {
     const links = document.querySelectorAll('.nav-link');
 
     if (btn && menu) {
-        btn.addEventListener('click', () => {
+        // Öffnen/Schließen per Klick auf Hamburger
+        btn.onclick = () => {
             menu.classList.toggle('active');
-            // Optional: Button Animation zum X
-            btn.classList.toggle('is-open'); 
-        });
+            btn.classList.toggle('is-open');
+        };
 
-        // Menü schließen, wenn ein Link geklickt wird
+        // Menü nur schließen, wenn ein "echter" Link (ohne Dropdown) geklickt wird
         links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('active');
-            });
+            link.onclick = () => {
+                const hasDropdown = link.parentElement.querySelector('.dropdown');
+                if (!hasDropdown) {
+                    menu.classList.remove('active');
+                    btn.classList.remove('is-open');
+                }
+            };
         });
     }
 }

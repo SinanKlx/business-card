@@ -585,7 +585,7 @@ function initScrollBehavior() {
 
 // ===== INIT FUNKTION ERWEITERN =====
 
-function initApp() {
+function initApp() { 
     
     initEventListeners();
     
@@ -622,4 +622,3 @@ window.addEventListener('resize', function() {
         }
     }, 250);
 });
-

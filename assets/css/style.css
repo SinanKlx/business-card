@@ -27,6 +27,15 @@ body > * {
 }
 
 /* ===== HEADER & NAVIGATION ===== */
+
+.hamburger-btn {
+    display: none; /* Auf Desktop immer verstecken */
+}
+
+.header-inner {
+    display: block; 
+}
+
 header {    
     padding: 1rem;
     z-index: 10;
